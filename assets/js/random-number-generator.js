@@ -3,7 +3,7 @@ function randWithVariation(min, max, variation) {
     var min = min, max = max, variation = variation;
     var r = function () {
         var offset = Math.floor(Math.random() * variation);
-        if (Math.random() < 0.5) offset *= -2; // chance that number will decrease
+        if (Math.random() < 0.5) offset *= -1; // chance that number will decrease
         seed += offset;
         if (seed < min) return max - seed; // also attempts to keep the result within the bounds
         if (seed > max) return min + (seed - max);
@@ -16,4 +16,4 @@ var rand = randWithVariation(10, 120, 10);
 document.getElementById('rnd').innerHTML = rand();
 setInterval(() => {
     document.getElementById('rnd').innerHTML = rand();
-}, 1500);
+}, 15000);
