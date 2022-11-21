@@ -12,7 +12,7 @@ function randWithVariation2(min, max, variation) {
     return r2;
 }
 
-var rand = randWithVariation2(10, 100, 10);
+var rand = randWithVariation2(10, 00, 10);
 document.getElementById('rnd2').innerHTML = rand();
 setInterval(() => {
     document.getElementById('rnd2').innerHTML = rand();
