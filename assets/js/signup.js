@@ -1,10 +1,10 @@
 const form = document.querySelector("form"),
     emailField = form.querySelector(".email-field"),
     emailInput = emailField.querySelector(".email"),
-    passField = form.querySelector(".create-password"),
-    passInput = passField.querySelector(".password"),
-    cPassField = form.querySelector(".confirm-password"),
-    cPassInput = cPassField.querySelector(".cPassword"),
+    // passField = form.querySelector(".create-password"),
+    // passInput = passField.querySelector(".password"),
+    // cPassField = form.querySelector(".confirm-password"),
+    // cPassInput = cPassField.querySelector(".cPassword"),
 
     claimField = form.querySelector(".claim-field"),
     claimInput = claimField.querySelector(".claim")
@@ -47,42 +47,38 @@ eyeIcons.forEach((eyeIcon) => {
     });
 });
 
-// Password Validation
-function createPass() {
-    const passPattern = 8;
 
-    if (!passInput.value.match(passPattern)) {
-        return passField.classList.add("invalid"); //adding invalid class if password input value do not match with passPattern
-    }
-    passField.classList.remove("invalid"); //removing invalid class if password input value matched with passPattern
-}
+// function createPass() {
+//     const passPattern = 8;
 
-// Confirm Password Validtion
-function confirmPass() {
-    if (passInput.value !== cPassInput.value || cPassInput.value === "") {
-        return cPassField.classList.add("invalid");
-    }
-    cPassField.classList.remove("invalid");
-}
+//     if (!passInput.value.match(passPattern)) {
+//         return passField.classList.add("invalid");
+//     }
+//     passField.classList.remove("invalid"); 
+// }
+
+
+// function confirmPass() {
+//     if (passInput.value !== cPassInput.value || cPassInput.value === "") {
+//         return cPassField.classList.add("invalid");
+//     }
+//     cPassField.classList.remove("invalid");
+// }
 
 // Calling Funtion on Form Sumbit
 form.addEventListener("submit", (e) => {
     e.preventDefault(); //preventing form submitting
     validateUsername();
     checkEmail();
-    createPass();
-    confirmPass();
+    // createPass();
+    // confirmPass();
 
     //calling function on key up
     emailInput.addEventListener("keyup", validateUsername);
     emailInput.addEventListener("keyup", checkEmail);
-    passInput.addEventListener("keyup", createPass);
-    cPassInput.addEventListener("keyup", confirmPass);
 
     if (
-        !emailField.classList.contains("invalid") &&
-        !passField.classList.contains("invalid") &&
-        !cPassField.classList.contains("invalid")
+        !emailField.classList.contains("invalid")
     ) {
         location.href = form.getAttribute("action");
     }
