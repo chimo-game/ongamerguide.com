@@ -16,4 +16,4 @@ var rand = randWithVariation(10, 120, 10);
 document.getElementById('rnd').innerHTML = rand();
 setInterval(() => {
     document.getElementById('rnd').innerHTML = rand();
-}, 15000);
+}, 30000);
