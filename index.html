@@ -55,7 +55,7 @@
 
     </head>
 
-    <body>
+    <body onLoad="startCount();">
 
         <div class="wrapper"></div>
 
@@ -167,17 +167,20 @@
 
             </div>
 
-
+            <br>
             <div class="recentActivity">
                 <div class="footer">
                     <!-- <span style="color:#262626;">- Server Status:<span style="color:#751de8;">
                                 Online</span></span><br>
                         <span style="color:#262626;">- Online Users: <span id="rnd" style="color:#751de8;">1</span>
                         </span><br> -->
-                    <span style="color:#262626;">- Account have been created: <span id="rnd2"
-                            style="color:#751de8;">2</span>
-                    </span>
-                    <p></p>
+
+                    <span class="timer">- Account have been created: <span id="counter" style="color:#751de8;">15</span>
+                        users</span>
+                    <span class="timer">- Online user: <span id="rnd" style="color:#751de8;">15</span>
+                        users</span>
+                    <br> <br>
+
                     <div class="container1">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -195,6 +198,9 @@
         <!-- Site footer -->
         <!-- custome-js -->
 
+        <script src="/assets/js/counter.js">
+
+        </script>
         <script src="/assets/js/signup.js">
 
         </script>
