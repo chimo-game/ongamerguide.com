@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(0, 0, 0);
-  /* background-image: url("/assets/images/gradient1.jpg"); */
+  background-image: url("/assets/images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 200ms linear;
@@ -148,10 +148,10 @@ body {
 
 @keyframes anim {
   from {
-    filter: drop-shadow(10px 10px 20px #0000);
+    filter: drop-shadow(10px 10px 20px var(--color-green));
   }
   to {
-    filter: drop-shadow(10px 10px 40px #0000);
+    filter: drop-shadow(10px 10px 40px rgb(38, 27, 255));
   }
 }
 
@@ -182,7 +182,7 @@ label#checkbox {
   width: 100%;
   padding: 8px 25px;
   border-radius: 20px;
-  background-color: #efefef;
+  background-color: #ffffff;
 }
 .container header {
   margin: 4px;
