@@ -1,8 +1,8 @@
 :root {
   --ff-oxanium: "Montserrat", sans-serif;
-  --ff-poppins: "Poppins", sans-serif;
+  --ff-poppins: "Teko", sans-serif;
 
-  --fs-1: 7rem;
+  --fs-1: 1.5rem;
 
   --color-green: #751de8;
   --color-acent: #751de8;
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--ff-poppins);
 }
 body {
   min-height: 100vh;
@@ -188,7 +188,7 @@ label#checkbox {
   margin: 4px;
   padding: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: var(--fs-1);
   font-weight: 600;
   color: #333;
 }
@@ -208,6 +208,7 @@ form .input-field {
   outline: none;
   border-radius: 50px;
   margin-top: 10px;
+  font-size: 20px;
   padding: 10px 10px;
   border: 2px solid var(--color-green);
 }
@@ -219,7 +220,7 @@ form .input-field {
   right: 13px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 18px;
+
   color: #919191;
   cursor: pointer;
   padding: 3px;
@@ -251,7 +252,7 @@ form .input-field {
 .button input {
   padding: 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
   background-color: var(--color-green);
   cursor: pointer;
