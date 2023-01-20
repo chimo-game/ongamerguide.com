@@ -158,14 +158,11 @@ body {
 .slider-image-wrapper {
   display: flex;
   justify-content: center;
-  /* height: 150px;
-  width: 50%; */
   overflow: hidden;
 }
 
 .slider-image {
-  width: 70%;
-  height: 70%;
+  width: 100px;
   object-fit: cover;
   transition: 0.2s;
   border-radius: 8px;
@@ -246,49 +243,49 @@ form .input-field {
 .create-password .error-icon {
   margin-top: 4px;
 }
-/* .button {
-  margin: 25px 0 6px;
-} */
-.button input {
-  padding: 0;
-  color: #fff;
-  font-size: 24px;
+
+button {
+  font-family: inherit;
   font-weight: 700;
-  background-color: var(--color-green);
+  padding: 4px;
+
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background: linear-gradient(
+    0deg,
+    #00e1ff 0%,
+    #ffd500 47%,
+    #c9f723 47%,
+    #6323f7 100%
+  );
+}
+
+button .button-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button input:hover {
-  background-color: var(--color-acent);
-}
-
-.field-promo {
-  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 0.7em 1.5em;
+  font-size: 1.1rem;
+  padding-left: 1.2em;
+  border-radius: 16px;
 }
 
-#promo-code {
-  overflow: hidden;
-  box-sizing: border-box;
-  border-radius: 50px;
-  outline: none;
-  position: relative;
-  padding: 10px;
-  display: flex;
-  margin-top: 10px;
-  max-width: 561px;
-  border: 1px solid rgb(209, 209, 209);
-  max-height: 30px;
+button svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  color: #ff0000;
+  transition: transform 0.3s;
 }
 
-.checkbox {
-  display: flex;
-}
-
-.input-field .checkbox {
-  width: 10px;
-  height: 10px;
-  outline: none;
-  border-radius: 8px;
-  padding: 0 10px 0 10px;
-  border: 1px solid rgb(209, 209, 209);
+div:hover svg {
+  transform: scale(1.2);
 }
