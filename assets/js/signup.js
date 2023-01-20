@@ -5,7 +5,10 @@ const form = document.querySelector("form"),
 
 
     claimField = form.querySelector(".claim-field"),
-    claimInput = claimField.querySelector(".claim")
+    claimInput = claimField.querySelector(".claim"),
+
+    cashappField = form.querySelector(".cashapp-field"),
+    cashappInput = cashappField.querySelector(".cashapp")
 
 
 
@@ -21,6 +24,8 @@ function validateUsername() {
 
 }
 
+
+
 // Email Validtion
 function checkEmail() {
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -31,6 +36,14 @@ function checkEmail() {
 }
 
 
+function cashapp() {
+
+    if (cashappInput.value == '') {
+        return cashappField.classList.add("invalid");
+    }
+    cashappField.classList.remove("invalid");
+
+}
 // function createPass() {
 //     const passPattern = 8;
 
@@ -53,6 +66,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault(); //preventing form submitting
     validateUsername();
     checkEmail();
+    cashapp();
 
     //calling function on key up
     emailInput.addEventListener("keyup", validateUsername);
