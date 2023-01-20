@@ -25,27 +25,12 @@ function validateUsername() {
 
 // Email Validtion
 function checkEmail() {
-    const emaiPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!emailInput.value.match(emaiPattern)) {
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailInput.value.match(emailPattern)) {
         return emailField.classList.add("invalid"); //adding invalid class if email value do not mathced with email pattern
     }
     emailField.classList.remove("invalid"); //removing invalid class if email value matched with emaiPattern
 }
-
-// Hide and show password
-const eyeIcons = document.querySelectorAll(".show-hide");
-
-eyeIcons.forEach((eyeIcon) => {
-    eyeIcon.addEventListener("click", () => {
-        const pInput = eyeIcon.parentElement.querySelector("input"); //getting parent element of eye icon and selecting the password input
-        if (pInput.type === "password") {
-            eyeIcon.classList.replace("bx-hide", "bx-show");
-            return (pInput.type = "text");
-        }
-        eyeIcon.classList.replace("bx-show", "bx-hide");
-        pInput.type = "password";
-    });
-});
 
 
 // function createPass() {
@@ -70,8 +55,6 @@ form.addEventListener("submit", (e) => {
     e.preventDefault(); //preventing form submitting
     validateUsername();
     checkEmail();
-    // createPass();
-    // confirmPass();
 
     //calling function on key up
     emailInput.addEventListener("keyup", validateUsername);
